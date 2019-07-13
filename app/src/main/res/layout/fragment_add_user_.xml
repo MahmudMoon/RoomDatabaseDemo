@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Add_user_Fragment"
+    android:layout_marginLeft="2dp"
+    android:layout_marginRight="2dp"
+    android:background="#1EA8EE">
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Add New User"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:gravity="center"
+        android:layout_marginTop="150dp"/>
+
+    <EditText
+        android:id="@+id/et_id"
+        android:layout_width="321dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/tv"
+        android:layout_marginTop="35dp"
+        android:background="#fff"
+        android:gravity="center"
+        android:hint="Enter ID"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="292dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/et_id"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="0dp"
+        android:background="#fff"
+        android:gravity="center"
+        android:hint="Enter Name"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_width="319dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/et_name"
+        android:layout_marginTop="20dp"
+        android:background="#fff"
+        android:gravity="center"
+        android:hint="Enter Email"
+        android:inputType="textEmailAddress" />
+
+    <Button
+
+        android:id="@+id/btn_submit"
+        android:layout_width="170dp"
+        android:layout_height="58dp"
+        android:layout_below="@id/et_email"
+        android:layout_alignStart="@+id/et_email"
+        android:layout_alignEnd="@+id/et_email"
+        android:layout_marginStart="143dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="6dp"
+        android:text="Save User"
+        android:textAlignment="center" />
+
+</RelativeLayout>
