@@ -40,17 +40,17 @@ public class GetUsers extends Fragment {
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
-                List<User> users = MainActivity.myDatabase.getDao().getUsers();
-                ArrayList<String> userNames = new ArrayList<>();
-                for (User user: users) {
-                    String name = user.getName();
-                    userNames.add(name);
-                }
-                arrayAdapter = new ArrayAdapter(getActivity().getApplicationContext(),android.R.layout.simple_list_item_1,userNames);
+                final List<User> users = MainActivity.myDatabase.getDao().getUsers();
+//                ArrayList<String> userNames = new ArrayList<>();
+//                for (User user: users) {
+//                    String name = user.getName();
+//                    userNames.add(name);
+//                }
+                //arrayAdapter = new ArrayAdapter(getActivity().getApplicationContext(),android.R.layout.simple_list_item_1,userNames);
                 getActivity().runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        mutableLiveData.setValue(arrayAdapter);
+                        mutableLiveData.setValue(users);
                     }
                 });
 
@@ -62,9 +62,10 @@ public class GetUsers extends Fragment {
         mutableLiveData.observe(this, new Observer() {
             @Override
             public void onChanged(Object o) {
-                ArrayAdapter arrayAdapter = (ArrayAdapter) o;
-                if(arrayAdapter!=null) {
-                    listView.setAdapter(arrayAdapter);
+                List<User> usersList = (List<User>) o;
+                if(usersList!=null && usersList.size()>0) {
+                    Custom_Adapter custom_adapter = new Custom_Adapter(getActivity().getApplicationContext(),usersList);
+                    listView.setAdapter(custom_adapter);
                 }
             }
         });

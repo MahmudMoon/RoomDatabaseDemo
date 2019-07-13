@@ -2,6 +2,7 @@ package com.example.moon.roomdatabasedemo;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 @Entity
@@ -15,6 +16,7 @@ public class User {
     @ColumnInfo(name = "user_email")
     private String email;
 
+    @Ignore
     public User() {
     }
 

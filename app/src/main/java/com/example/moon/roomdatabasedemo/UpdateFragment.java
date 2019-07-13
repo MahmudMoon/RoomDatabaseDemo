@@ -11,16 +11,17 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class DeleteFragment extends Fragment {
+public class UpdateFragment extends Fragment {
+
 
     User user;
-
-    public DeleteFragment() {
+    public UpdateFragment() {
         // Required empty public constructor
     }
 
@@ -29,32 +30,29 @@ public class DeleteFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_delete, container, false);
-        final EditText editText = view.findViewById(R.id.editText);
-        Button delete_btn = view.findViewById(R.id.button);
+        View view = inflater.inflate(R.layout.fragment_blank2, container, false);
+        final EditText et_user_uid = (EditText)view.findViewById(R.id.et_id);
+        final EditText et_user_name = (EditText)view.findViewById(R.id.et_name);
+        final EditText et_user_email = (EditText)view.findViewById(R.id.et_email);
+        Button btn_update = (Button)view.findViewById(R.id.btn_submit);
 
-        delete_btn.setOnClickListener(new View.OnClickListener() {
+
+        btn_update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                user = new User();
-                final int uid = Integer.parseInt(editText.getText().toString());
-                //user.setUid(uid);
+                user = new User(Integer.parseInt(et_user_uid.getText().toString()),et_user_name.getText().toString(),et_user_email.getText().toString());
                 Thread thread = new Thread(new Runnable() {
                     @Override
                     public void run() {
-                        MainActivity.myDatabase.getDao().removeUser(uid);
+                        MainActivity.myDatabase.getDao().updateUser(user);
                     }
                 });
-
                 thread.start();
 
-                Toast.makeText(getActivity().getApplicationContext(),"Deleted",Toast.LENGTH_SHORT).show();
-
+                Toast.makeText(getContext(),"Updated",Toast.LENGTH_SHORT).show();
             }
         });
-
         return view;
-
     }
 
 }
