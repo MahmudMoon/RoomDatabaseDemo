@@ -1,4 +1,4 @@
-package com.example.moon.roomdatabasedemo;
+package com.example.moon.roomdatabasedemo.entitys;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;

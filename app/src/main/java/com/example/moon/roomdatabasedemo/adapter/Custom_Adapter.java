@@ -1,4 +1,4 @@
-package com.example.moon.roomdatabasedemo;
+package com.example.moon.roomdatabasedemo.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,7 +7,9 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import java.util.ArrayList;
+import com.example.moon.roomdatabasedemo.R;
+import com.example.moon.roomdatabasedemo.entitys.User;
+
 import java.util.List;
 
 public class Custom_Adapter extends BaseAdapter {

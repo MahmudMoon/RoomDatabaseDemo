@@ -1,4 +1,4 @@
-package com.example.moon.roomdatabasedemo;
+package com.example.moon.roomdatabasedemo.fragments;
 
 
 import android.os.Bundle;
@@ -11,6 +11,10 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.moon.roomdatabasedemo.activitites.MainActivity;
+import com.example.moon.roomdatabasedemo.R;
+import com.example.moon.roomdatabasedemo.entitys.User;
 
 
 /**

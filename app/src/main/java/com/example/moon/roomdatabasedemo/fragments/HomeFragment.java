@@ -1,4 +1,4 @@
-package com.example.moon.roomdatabasedemo;
+package com.example.moon.roomdatabasedemo.fragments;
 
 
 import android.os.Bundle;
@@ -9,6 +9,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+
+import com.example.moon.roomdatabasedemo.activitites.MainActivity;
+import com.example.moon.roomdatabasedemo.R;
 
 
 public class HomeFragment extends Fragment {

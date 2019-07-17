@@ -1,10 +1,11 @@
-package com.example.moon.roomdatabasedemo;
+package com.example.moon.roomdatabasedemo.dao;
 
 import androidx.room.Dao;
-import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
+
+import com.example.moon.roomdatabasedemo.entitys.User;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.example.moon.roomdatabasedemo;
+package com.example.moon.roomdatabasedemo.fragments;
 
 
 import android.os.Bundle;
@@ -13,7 +13,11 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import java.util.ArrayList;
+import com.example.moon.roomdatabasedemo.activitites.MainActivity;
+import com.example.moon.roomdatabasedemo.R;
+import com.example.moon.roomdatabasedemo.entitys.User;
+import com.example.moon.roomdatabasedemo.adapter.Custom_Adapter;
+
 import java.util.List;
 
 

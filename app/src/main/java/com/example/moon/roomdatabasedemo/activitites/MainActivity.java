@@ -1,4 +1,4 @@
-package com.example.moon.roomdatabasedemo;
+package com.example.moon.roomdatabasedemo.activitites;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
@@ -6,6 +6,10 @@ import androidx.room.Room;
 
 import android.os.Bundle;
 import android.widget.FrameLayout;
+
+import com.example.moon.roomdatabasedemo.database.MyDatabase;
+import com.example.moon.roomdatabasedemo.R;
+import com.example.moon.roomdatabasedemo.fragments.HomeFragment;
 
 
 public class MainActivity extends AppCompatActivity {
